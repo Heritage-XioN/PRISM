@@ -1,0 +1,7 @@
+############################################################
+# Production-ready .dockerignore for a FastAPI app
+# Keeps Docker builds fast, lean, and free of development files.
+############################################################
+
+./__pycache__
+./.venv
