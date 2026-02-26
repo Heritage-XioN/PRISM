@@ -1,0 +1,41 @@
+services:
+  traefik:
+    image: traefik:v3.6
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+  # Node.js service (use with: docker compose up nextjs-standalone --build)
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: prism-client-container
+    container_name: prism-client-container
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+  auth-service:
+    build:
+      context: ./services/auth-service
+      dockerfile: Dockerfile
+    image: prism-auth-service-container
+    container_name: prism-auth-service-container
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    labels:
+      # Define the Middleware
+      - "traefik.http.middlewares.my-auth.forwardauth.address=http://auth-service:8000/verify"
+      # Tell Traefik to take these headers from Auth response and give them to the backend
+      - "traefik.http.middlewares.my-auth.forwardauth.authResponseHeaders=X-User-ID,X-User-Role"
