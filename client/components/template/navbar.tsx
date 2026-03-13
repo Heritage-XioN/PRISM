@@ -5,11 +5,11 @@ import NavbarLogoSection from '../block/navbar-logo-section';
 
 const Navbar = () => {
 	return (
-		<div className='flex justify-between items-center bg-[#7C3AED] px-4 py-4'>
+		<nav className='flex justify-between items-center bg-linear-to-r from-[#4f2099] via-[#6637bd] to-[#8152e7] px-4 py-4'>
 			<NavbarLogoSection />
 			<NavbarLinksSection />
 			<NavbarButtonSection />
-		</div>
+		</nav>
 	);
 };
 
