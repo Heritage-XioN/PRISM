@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#ffffff",
+              "primary": "#0da6f2",
+              "outline": "#3e4851",
+              "surface-tint": "#0da6f2",
+              "inverse-surface": "#f5f7f8",
+              "tertiary": "#ffffff",
+              "primary-container": "#0da6f2",
+              "background": "#0a0a0a",
+              "tertiary-fixed": "#ffffff",
+              "surface-variant": "#141414",
+              "surface-dim": "#0a0a0a",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#cbd5e1",
+              "inverse-on-surface": "#0a0a0a",
+              "on-tertiary-fixed-variant": "#1e293b",
+              "on-secondary-fixed": "#0f172a",
+              "tertiary-fixed-dim": "#f1f5f9",
+              "on-error": "#ffffff",
+              "on-tertiary": "#0a0a0a",
+              "on-secondary-fixed-variant": "#334155",
+              "surface-container-high": "#252b2f",
+              "on-primary-fixed-variant": "#075985",
+              "surface-container": "#1b2025",
+              "on-primary-fixed": "#082f49",
+              "tertiary-container": "#334155",
+              "on-surface-variant": "#94a3b8",
+              "surface-container-low": "#141414",
+              "on-error-container": "#fca5a5",
+              "on-secondary-container": "#cbd5e1",
+              "primary-fixed": "#bae6fd",
+              "surface-container-highest": "#30353a",
+              "error": "#ef4444",
+              "primary-fixed-dim": "#7dd3fc",
+              "surface-container-lowest": "#050505",
+              "error-container": "#7f1d1d",
+              "secondary-fixed": "#e2e8f0",
+              "outline-variant": "rgba(255, 255, 255, 0.05)",
+              "secondary": "#cbd5e1",
+              "on-secondary": "#141414",
+              "on-tertiary-container": "#f1f5f9",
+              "on-surface": "#cbd5e1",
+              "secondary-container": "#1f2937",
+              "inverse-primary": "#006494",
+              "surface-bright": "#1f2937",
+              "surface": "#0a0a0a",
+              "on-primary-container": "#ffffff",
+              "on-tertiary-fixed": "#0a0a0a"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .silver-text {
+            background: linear-gradient(180deg, #ffffff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5 shadow-2xl">
+<div class="flex justify-between items-center px-8 py-4 max-w-full">
+<div class="text-xl font-black tracking-tighter text-white uppercase">PRISM</div>
+<div class="hidden md:flex items-center gap-8 font-['Inter'] font-semibold tracking-tight">
+<a class="text-slate-400 hover:text-white transition-colors duration-200" href="#">Platform</a>
+<a class="text-[#0da6f2] border-b-2 border-[#0da6f2] pb-1" href="#">Solutions</a>
+<a class="text-slate-400 hover:text-white transition-colors duration-200" href="#">Intelligence</a>
+<a class="text-slate-400 hover:text-white transition-colors duration-200" href="#">Pricing</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-5 py-2 text-sm font-semibold text-white/70 hover:text-white transition-all duration-200">Sign In</button>
+<button class="px-6 py-2 bg-white text-black text-sm font-bold uppercase tracking-wider scale-95 active:scale-90 transition-transform shadow-lg">Initialize Node</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20">
+<!-- Hero Section -->
+<section class="relative min-h-[716px] flex items-center px-8 max-w-7xl mx-auto overflow-hidden">
+<div class="w-full md:w-3/4 z-10">
+<div class="inline-block px-3 py-1 mb-6 border border-white/10 bg-white/5 rounded-sm">
+<span class="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">Strategic Infrastructure</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-black silver-text tracking-tighter leading-[0.9] mb-8">
+                    Refracting Data into Strategic Advantage.
+                </h1>
+<p class="text-xl text-on-surface-variant max-w-2xl font-light leading-relaxed mb-10">
+                    High-stakes organizational intelligence designed for elite technical leadership. Deploy PRISM to map, measure, and optimize your human capital architecture.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-white text-black font-black uppercase text-xs tracking-widest hover:bg-slate-200 transition-colors">Request Briefing</button>
+<button class="px-8 py-4 border border-white/10 bg-white/5 text-white font-black uppercase text-xs tracking-widest hover:bg-white/10 transition-colors">View Ecosystem</button>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 h-full opacity-20 pointer-events-none">
+<div class="w-full h-full bg-gradient-to-l from-primary/20 to-transparent blur-3xl"></div>
+</div>
+</section>
+<!-- Sector-Specific Solutions -->
+<section class="px-8 max-w-7xl mx-auto mt-32">
+<div class="mb-16">
+<h2 class="text-[10px] font-semibold uppercase tracking-[0.3em] text-slate-500 mb-4">Vertical Architectures</h2>
+<h3 class="text-3xl font-bold text-white tracking-tight">Sector-Specific Solutions</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Talent Acquisition -->
+<div class="group p-8 bg-surface-container-low border border-white/5 hover:border-primary/50 transition-all duration-300">
+<div class="mb-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="diversity_3">diversity_3</span>
+</div>
+<h4 class="text-xl font-bold text-white mb-4">Talent Acquisition</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Advanced AI matching protocols that analyze cognitive fit and technical velocity beyond standard resume metrics.</p>
+<div class="pt-6 border-t border-white/5 flex items-center justify-between group-hover:text-primary transition-colors">
+<span class="text-[10px] font-bold uppercase tracking-widest">AI Matching</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- HR Operations -->
+<div class="group p-8 bg-surface-container-low border border-white/5 hover:border-primary/50 transition-all duration-300">
+<div class="mb-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="account_tree">account_tree</span>
+</div>
+<h4 class="text-xl font-bold text-white mb-4">HR Operations</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Real-time skill mapping and dependency analysis to prevent operational bottlenecks in complex project cycles.</p>
+<div class="pt-6 border-t border-white/5 flex items-center justify-between group-hover:text-primary transition-colors">
+<span class="text-[10px] font-bold uppercase tracking-widest">Skill Mapping</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- Executive Leadership -->
+<div class="group p-8 bg-surface-container-low border border-white/5 hover:border-primary/50 transition-all duration-300">
+<div class="mb-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="shield_person">shield_person</span>
+</div>
+<h4 class="text-xl font-bold text-white mb-4">Executive Leadership</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Strategic succession planning using predictive retention models and leadership trajectory forecasting.</p>
+<div class="pt-6 border-t border-white/5 flex items-center justify-between group-hover:text-primary transition-colors">
+<span class="text-[10px] font-bold uppercase tracking-widest">Succession Planning</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Use Cases (Bento Grid) -->
+<section class="px-8 max-w-7xl mx-auto mt-32">
+<div class="mb-16 text-center">
+<h2 class="text-[10px] font-semibold uppercase tracking-[0.3em] text-slate-500 mb-4">Operational Impact</h2>
+<h3 class="text-3xl font-bold text-white tracking-tight">Enterprise Use Cases</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
+<!-- Case 1: Strategic Right-Sizing -->
+<div class="md:col-span-8 relative group overflow-hidden bg-surface-container border border-white/5">
+<div class="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity">
+<img alt="Data visualization" class="w-full h-full object-cover" data-alt="abstract data visualization with white lines and nodes over a deep black background, technical architectural style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAybRvmn4Gv6u7F6Ml_yauPRR6NMV3vVu8jK0O88r73BhV-4ytmAk-eigmjB1w1iNtEktJxNhMt46Khx8mdHJMnEoe_N3QvyIJltVy8P89-tfnVb6CGiEgMC0xQ14tzCXQiKLE_CBA9nHCQ2AzypGZwL8zz9Q-p_YGUgYVNILvdXtlV7Y68fxYogH-UzHqv9XvKhwQlAimstoLxo2dlX8qUR5zbm8dVlBf3P4hYu20bwRFQ-3j7Z6GXINfMeiQIpCuQDJzbJtMACcQ"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10">
+<h4 class="text-2xl font-black text-white mb-3">Strategic Right-Sizing</h4>
+<p class="text-slate-300 max-w-md text-sm font-light">Eliminate redundancies and optimize headcount distribution through architectural workload analysis.</p>
+</div>
+<div class="absolute top-8 right-8">
+<span class="px-4 py-1 text-[10px] font-bold tracking-widest border border-primary text-primary bg-primary/5 uppercase">Active Protocol</span>
+</div>
+</div>
+<!-- Case 2: High-Potential Identification -->
+<div class="md:col-span-4 relative group overflow-hidden bg-surface-container border border-white/5">
+<div class="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[120px] text-white/10" data-icon="psychology">psychology</span>
+</div>
+<div class="p-10 h-full flex flex-col justify-end">
+<h4 class="text-2xl font-black text-white mb-3">High-Potential ID</h4>
+<p class="text-slate-300 text-sm font-light">Identify "hidden" talent hubs within your organization using behavioral velocity data.</p>
+</div>
+</div>
+<!-- Case 3: Global Workforce Visibility -->
+<div class="md:col-span-4 relative group overflow-hidden bg-surface-container border border-white/5">
+<div class="p-10 h-full flex flex-col justify-end">
+<h4 class="text-2xl font-black text-white mb-3">Global Visibility</h4>
+<p class="text-slate-300 text-sm font-light">Unify disparate HR data into a single, high-fidelity command center for global decision making.</p>
+</div>
+<div class="absolute top-10 left-10">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="language">language</span>
+</div>
+</div>
+<!-- Decorative Static -->
+<div class="md:col-span-8 bg-surface-container-low border border-white/5 p-10 flex items-center justify-center relative overflow-hidden">
+<div class="text-center z-10">
+<h5 class="text-4xl font-black text-white/5 tracking-[0.2em] mb-4">OPERATIONAL EFFICIENCY</h5>
+<p class="text-primary text-[10px] font-bold uppercase tracking-[0.5em]">+42% DATA RESOLUTION</p>
+</div>
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+<div class="w-full h-full" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Client Testimonials -->
+<section class="px-8 max-w-7xl mx-auto mt-32">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-[10px] font-semibold uppercase tracking-[0.3em] text-slate-500 mb-4">Executive Validation</h2>
+<h3 class="text-4xl font-black text-white tracking-tighter silver-text mb-8">Trusted by the Architect Class.</h3>
+<p class="text-on-surface-variant leading-relaxed">Our partners represent the leading edge of global infrastructure, logistics, and technology.</p>
+</div>
+<div class="space-y-12">
+<blockquote class="relative pl-12">
+<span class="absolute left-0 top-0 text-6xl text-primary/20 font-serif leading-none">“</span>
+<p class="text-xl text-white font-light italic leading-relaxed mb-6">
+                            PRISM provided the surgical precision we needed to restructure our engineering divisions without losing momentum. It's an indispensable asset for modern scale.
+                        </p>
+<footer class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-container-high rounded-sm">
+<img alt="Executive Profile" class="w-full h-full object-cover grayscale opacity-80" data-alt="portrait of a confident mature male executive in a dark tailored suit, professional studio lighting, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASBnmSiG7rkKn5GtdEYmlZK7-efP8u6B0ksqdOB43pd9d_0_taT-qER8jNX-2t9Pydf09qq1RWPZWRDDBx3og9ZRwnG0Yypiv95pDsu66CuKo0p4644z1iujonJGysevUHP0Tb0nxv0f_YOHCeBVdxQ88Wwi5bu9xEzxb_7q_MrbSqzXwh8YQYbuplZLDMvUD1vqDJxCkMh8XxXPCy3ZI1DXdvk470C9PzGIzenOf0M2ga-tW_96kQH7Bsq_DZEJLG_-AuUS7QNrE"/>
+</div>
+<div>
+<div class="text-sm font-bold text-white uppercase tracking-wider">Marcus Thorne</div>
+<div class="text-[10px] text-slate-500 uppercase tracking-widest">CTO, Vertex Logistics</div>
+</div>
+</footer>
+</blockquote>
+<blockquote class="relative pl-12 border-t border-white/5 pt-12">
+<span class="absolute left-0 top-12 text-6xl text-primary/20 font-serif leading-none">“</span>
+<p class="text-xl text-white font-light italic leading-relaxed mb-6">
+                            The level of insight PRISM offers into our human capital hierarchy is unprecedented. We no longer guess—we execute based on structural data.
+                        </p>
+<footer class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-container-high rounded-sm">
+<img alt="Executive Profile" class="w-full h-full object-cover grayscale opacity-80" data-alt="portrait of a professional female executive in a minimalist modern office setting, soft dramatic lighting, high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM5H8EW4GocmIAvKZpnEP3uh9t2ULFHDfPvMDyv-j3WagTT_k8qPhLaI1oCSbNXsiB6Jslmtw4t_NnqZd3SG1jx-FUJcrViUWBlvmzRXxIAs-sjGxtbcytDzgLjPK9qDE31Oyp5PsnPlA0Jk4K7UCxIqcrwVQpQ6a0WSH7-mU_xhHAddYnxVtPG8umq5FDqTb_U_7viJMg2xXhKNdjVP0cZqVnL_40E_gT0LbJ899gB8VfnxFr1DTKOb_rlgXDv7OcNIoeUPyIGGI"/>
+</div>
+<div>
+<div class="text-sm font-bold text-white uppercase tracking-wider">Elena Vance</div>
+<div class="text-[10px] text-slate-500 uppercase tracking-widest">VP Strategy, Aetheric Corp</div>
+</div>
+</footer>
+</blockquote>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#050505] w-full py-12 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-lg font-black text-white">PRISM</div>
+<div class="flex gap-8 text-[10px] font-semibold uppercase tracking-[0.1em] text-slate-500">
+<a class="hover:text-[#0da6f2] transition-colors" href="#">Security</a>
+<a class="hover:text-[#0da6f2] transition-colors" href="#">API</a>
+<a class="hover:text-[#0da6f2] transition-colors" href="#">Terms</a>
+<a class="hover:text-[#0da6f2] transition-colors" href="#">Privacy</a>
+</div>
+<div class="text-[10px] font-semibold uppercase tracking-[0.1em] text-slate-600">
+                © 2024 PRISM ARCHITECT. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+</body></html>

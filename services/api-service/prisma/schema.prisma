@@ -1,0 +1,74 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  MANAGER
+  EMPLOYEE
+
+  @@map("role")
+}
+
+enum SkillCategory {
+  TECHNICAL
+  SOFT
+  DOMAIN
+  LEADERSHIP
+  TOOL
+
+  @@map("skill_category")
+}
+
+model organisations {
+  id         Int      @id @default(autoincrement())
+  name       String
+  industry   String?
+  created_at DateTime @default(now()) @db.Timestamptz(6)
+  updated_at DateTime @updatedAt @db.Timestamptz(6)
+
+  users      users[]
+
+  @@map("organisations")
+}
+
+model users {
+  id              Int      @id @default(autoincrement())
+  first_name      String
+  last_name       String
+  personal_email  String   @unique
+  company_email   String   @unique
+  role            Role     @default(EMPLOYEE)
+  job_title       String?
+  department      String?
+  password        String
+  organisation_id Int
+  created_at      DateTime @default(now()) @db.Timestamptz(6)
+  updated_at      DateTime @updatedAt @db.Timestamptz(6)
+
+  organisation    organisations @relation(fields: [organisation_id], references: [id], onDelete: Cascade)
+  skills          skills[]
+
+  @@map("users")
+}
+
+model skills {
+  id          Int           @id @default(autoincrement())
+  user_id     Int
+  skill       String
+  category    SkillCategory
+  proficiency Int
+  verified    Boolean       @default(false)
+  created_at  DateTime      @default(now()) @db.Timestamptz(6)
+  updated_at  DateTime      @updatedAt @db.Timestamptz(6)
+
+  user        users         @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id])
+  @@map("skills")
+}

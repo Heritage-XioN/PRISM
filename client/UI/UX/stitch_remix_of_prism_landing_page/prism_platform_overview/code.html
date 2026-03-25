@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PRISM | Platform Intelligence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#ffffff",
+              "primary": "#0da6f2",
+              "outline": "#3e4851",
+              "surface-tint": "#0da6f2",
+              "inverse-surface": "#f5f7f8",
+              "tertiary": "#ffffff",
+              "primary-container": "#0da6f2",
+              "background": "#0a0a0a",
+              "tertiary-fixed": "#ffffff",
+              "surface-variant": "#141414",
+              "surface-dim": "#0a0a0a",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#cbd5e1",
+              "inverse-on-surface": "#0a0a0a",
+              "on-tertiary-fixed-variant": "#1e293b",
+              "on-secondary-fixed": "#0f172a",
+              "tertiary-fixed-dim": "#f1f5f9",
+              "on-error": "#ffffff",
+              "on-tertiary": "#0a0a0a",
+              "on-secondary-fixed-variant": "#334155",
+              "surface-container-high": "#252b2f",
+              "on-primary-fixed-variant": "#075985",
+              "surface-container": "#1b2025",
+              "on-primary-fixed": "#082f49",
+              "tertiary-container": "#334155",
+              "on-surface-variant": "#94a3b8",
+              "surface-container-low": "#141414",
+              "on-error-container": "#fca5a5",
+              "on-secondary-container": "#cbd5e1",
+              "primary-fixed": "#bae6fd",
+              "surface-container-highest": "#30353a",
+              "error": "#ef4444",
+              "primary-fixed-dim": "#7dd3fc",
+              "surface-container-lowest": "#050505",
+              "error-container": "#7f1d1d",
+              "secondary-fixed": "#e2e8f0",
+              "outline-variant": "rgba(255, 255, 255, 0.05)",
+              "secondary": "#cbd5e1",
+              "on-secondary": "#141414",
+              "on-tertiary-container": "#f1f5f9",
+              "on-surface": "#cbd5e1",
+              "secondary-container": "#1f2937",
+              "inverse-primary": "#006494",
+              "surface-bright": "#1f2937",
+              "surface": "#0a0a0a",
+              "on-primary-container": "#ffffff",
+              "on-tertiary-fixed": "#0a0a0a"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .silver-text {
+        background: linear-gradient(180deg, #FFFFFF 0%, #94a3b8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .obsidian-glass {
+        background: rgba(10, 10, 10, 0.8);
+        backdrop-filter: blur(12px);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5 shadow-2xl flex justify-between items-center px-8 py-4 max-w-full">
+<div class="flex items-center gap-8">
+<span class="text-xl font-black tracking-tighter text-white uppercase font-headline">PRISM</span>
+<div class="hidden md:flex gap-6">
+<a class="text-[#0da6f2] border-b-2 border-[#0da6f2] pb-1 font-semibold tracking-tight" href="#">Platform</a>
+<a class="text-slate-400 hover:text-white transition-colors duration-200 font-semibold tracking-tight" href="#">Solutions</a>
+<a class="text-slate-400 hover:text-white transition-colors duration-200 font-semibold tracking-tight" href="#">Intelligence</a>
+<a class="text-slate-400 hover:text-white transition-colors duration-200 font-semibold tracking-tight" href="#">Pricing</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-400 hover:text-white transition-colors duration-200 font-semibold px-4 py-2 opacity-80 hover:opacity-100">Sign In</button>
+<button class="bg-white text-black font-bold px-6 py-2 rounded shadow-lg scale-95 active:scale-90 transition-transform uppercase text-xs tracking-widest">Initialize Node</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center px-8 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10"></div>
+<img class="w-full h-full object-cover grayscale opacity-40" data-alt="Abstract architectural render of sharp silver geometric monoliths in a dark atmospheric space with metallic reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChyXD1-BNQBQ7o7NrG0-gvzg9VEI4DhKah5YUAUTfiLXOTcqbKWToxgK409pkTaC2gVjAmIV_c6qn9xzhCqO9k_FNSJI7g_gR1fTpuE8mzKEQeq1eWAM8_KFgB6epZDL0WKvIfc-u-6QVdV1Q94WzIeHxBayalfpGpK9oD0UFzl4eZ7370mSOYjEVyO5o4aJNP5lc2s3apkjF2ZfXO7rxtoLSD3w7Kl3Mvmhcd1Xm-K0FcxLqcUJvqvKicECNYBExmj4iXa-xRSk0"/>
+</div>
+<div class="relative z-20 max-w-4xl">
+<div class="flex items-center gap-3 mb-6">
+<span class="w-12 h-[1px] bg-primary"></span>
+<span class="text-primary font-label text-xs tracking-[0.2em] uppercase font-semibold">The Architect Suite</span>
+</div>
+<h1 class="silver-text text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8 font-headline">
+                    One Platform,<br/>Infinite Intelligence.
+                </h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
+                    PRISM is the definitive technical infrastructure for elite enterprise talent. Orchestrate high-stakes deployments with a unified, high-contrast intelligence layer.
+                </p>
+<div class="flex gap-4">
+<button class="bg-white text-black font-bold px-8 py-4 rounded shadow-lg transition-transform active:scale-95 uppercase text-sm tracking-widest">Deploy Ecosystem</button>
+<button class="border border-white/10 bg-white/5 hover:bg-white/10 text-white font-bold px-8 py-4 rounded transition-all flex items-center gap-2 uppercase text-sm tracking-widest">
+<span class="material-symbols-outlined text-sm">terminal</span> Technical Docs
+                    </button>
+</div>
+</div>
+</section>
+<!-- Architecture Section: The Obsidian Layer -->
+<section class="py-24 px-8 bg-surface-lowest">
+<div class="max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="text-primary font-label text-[10px] tracking-[0.3em] uppercase mb-4 block">Core Infrastructure</span>
+<h2 class="text-4xl font-bold mb-6 silver-text">The Obsidian Layer</h2>
+<p class="text-on-surface-variant mb-8 leading-relaxed">
+                            A cold, precise, and authoritative backbone. The Obsidian Layer provides a non-volatile environment for high-stakes enterprise data processing, ensuring zero-latency talent matching across global node clusters.
+                        </p>
+<div class="space-y-6">
+<div class="p-6 border border-white/5 bg-surface-container-low rounded-lg flex gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">hub</span>
+<div>
+<h4 class="text-white font-bold mb-1">Decentralized Node Architecture</h4>
+<p class="text-sm text-on-surface-variant">Distributed processing prevents single-point failure across regional intelligence hubs.</p>
+</div>
+</div>
+<div class="p-6 border border-white/5 bg-surface-container-low rounded-lg flex gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">memory</span>
+<div>
+<h4 class="text-white font-bold mb-1">Neural Vector Indexing</h4>
+<p class="text-sm text-on-surface-variant">Proprietary high-dimensional mapping of talent capabilities and technical proficiency.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-tr from-primary/20 to-transparent blur-2xl opacity-50 group-hover:opacity-100 transition duration-1000"></div>
+<div class="relative bg-surface-variant border border-white/10 p-2 rounded-xl overflow-hidden aspect-square">
+<img class="w-full h-full object-cover opacity-60" data-alt="Top down view of complex server motherboard circuitry with glowing cyan light tracers and dark metallic finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCnYhTu3ivdEqWJa9CFOv1alUIlkqhV5eZ2SQdL0j5N0Hfewbdr1L2kDhtryS_HQ-T_GrUCGp_3-vjmlGu236h9AfNry4MkV_nT9DRgaTp3zNZBCsagHl4pk4OsT8QBlPC3fvdK3xhbCVUqp7F4qKT01gyWQ1ACq3yWpg7BsqGbcauzSyyOqmP9OMSVdbkH3sj1H9ktfwVLmJXgotOZs37RfcYlGqn7vwtrWIvWWdbG8SQm1RKsn9z9Li-COA30cd5JtinxyXPFz4"/>
+<div class="absolute bottom-8 left-8 right-8 p-6 obsidian-glass border border-white/10 rounded">
+<div class="flex justify-between items-center mb-4">
+<span class="text-[10px] text-primary font-bold tracking-[0.2em] uppercase">System Status: Active</span>
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+</div>
+<div class="h-1 bg-white/10 w-full rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[84%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Modules: Bento Grid -->
+<section class="py-24 px-8 bg-background">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-black mb-4 silver-text uppercase tracking-tight">Intelligence Modules</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Precision tools engineered for the modern technical architect.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Module 1 -->
+<div class="md:col-span-2 group relative bg-surface-container-low border border-white/5 p-8 rounded-xl overflow-hidden hover:border-white/20 transition-all duration-300">
+<div class="relative z-10 flex flex-col h-full">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-weight="fill">settings_account_box</span>
+<h3 class="text-2xl font-bold text-white mb-4">Admin Command Center</h3>
+<p class="text-on-surface-variant max-w-md mb-8">Unified governance for global talent operations. Manage permissions, security tiers, and cross-border deployments from a single glass-pane interface.</p>
+<div class="mt-auto flex gap-4">
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded text-[10px] uppercase tracking-widest font-bold">Node Management</span>
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded text-[10px] uppercase tracking-widest font-bold">Policy Engine</span>
+</div>
+</div>
+<img class="absolute top-0 right-0 w-1/2 h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity" data-alt="Abstract data visualization with clean lines and high contrast charts in a dark mode interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUk3QwxPYnTAgGblesVNg_wpHFNswEldVya4SDcNGAfh2yendngLdw1-FplZ-dj5zxNZhbzilC9NByXj2JpgFjrbU9hDIhIfsnGvGqgbGNauMg5AQozBUKzEzODsfkqlzhyCQy5yTSCgDDIneZrdC5uofUo7HLZYNMFlSGdudbdrwvDT1dLe9HtLyjlSO146tArsyhzHu4fNkS24zERLAwPYv2S2uhkyJpyKZsTjdkvf7F7WtAw-lWhHmSOJzy7oPTYqNiDWH2mbM"/>
+</div>
+<!-- Module 2 -->
+<div class="bg-surface-container-low border border-white/5 p-8 rounded-xl hover:border-white/20 transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">storefront</span>
+<h3 class="text-2xl font-bold text-white mb-4">AI Marketplace</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Access pre-trained intelligence nodes and specialized talent models optimized for infrastructure engineering.</p>
+<a class="text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:gap-4 transition-all" href="#">Explore Models <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
+</div>
+<!-- Module 3 -->
+<div class="bg-surface-container-low border border-white/5 p-8 rounded-xl hover:border-white/20 transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">insights</span>
+<h3 class="text-2xl font-bold text-white mb-4">Talent Hub</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">The central repository for high-fidelity talent data. Real-time skill validation and architectural fit analysis.</p>
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-background bg-slate-800"></div>
+<div class="w-10 h-10 rounded-full border-2 border-background bg-slate-700"></div>
+<div class="w-10 h-10 rounded-full border-2 border-background bg-slate-600"></div>
+<div class="w-10 h-10 rounded-full border-2 border-background bg-primary flex items-center justify-center text-[10px] font-bold">+2k</div>
+</div>
+</div>
+<!-- Module 4 -->
+<div class="md:col-span-2 bg-surface-container-low border border-white/5 p-8 rounded-xl flex flex-col md:flex-row gap-8 items-center hover:border-white/20 transition-all duration-300">
+<div class="flex-1">
+<h3 class="text-2xl font-bold text-white mb-4">Predictive Dynamics</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Forecast technical requirements before they manifest. Our PRISM engine simulates workforce evolution scenarios with 98.4% accuracy.</p>
+</div>
+<div class="grid grid-cols-2 gap-2 w-full md:w-auto">
+<div class="h-20 w-full md:w-32 bg-white/5 rounded border border-white/5"></div>
+<div class="h-20 w-full md:w-32 bg-primary/20 rounded border border-primary/20"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Security & Compliance -->
+<section class="py-24 px-8 bg-surface-lowest border-y border-white/5">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="max-w-xl">
+<h2 class="text-3xl font-bold mb-6 silver-text">Sovereign Data Security</h2>
+<p class="text-on-surface-variant mb-8">
+                        Architected for the highest security tiers. Your intelligence remains yours, protected by aerospace-grade encryption and rigorous compliance protocols.
+                    </p>
+<div class="flex flex-wrap gap-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-500">verified_user</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">AES-256 Encryption</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-500">security</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">SOC2 Type II</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-500">gavel</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">GDPR Compliant</span>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-32 h-32 rounded-lg bg-white/5 border border-white/10 flex flex-col items-center justify-center grayscale hover:grayscale-0 transition-all">
+<img class="w-12 h-12 mb-2 opacity-80" data-alt="Stylized silver security seal with metallic reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt4yD02-KnUa3oo_KVGqAr_AMhPv0dMuWmOXWR_9Ygg2DacO-_yEU7I-XKw8lmnrsH7DqG41eYdVA6HjE0e76o2gGGc5LS7VnzHRZtXKH0tcDVNhKJkb5OdbEcBb1HkJfApZOScPJwkg6ATlXF02z_SuFpw2BGy877uo_WvhsnK0NbTlQY6TMutEnHJWcLYumG1ht5cZt7yld6d2b2Z35BJJJOaD7bFKLe7sdIlif1vEy22ggwsWGQxI3POT8oojYmMT3o_K8CGs0"/>
+<span class="text-[8px] font-bold uppercase tracking-tighter text-slate-500">Verified</span>
+</div>
+<div class="w-32 h-32 rounded-lg bg-white/5 border border-white/10 flex flex-col items-center justify-center grayscale hover:grayscale-0 transition-all">
+<img class="w-12 h-12 mb-2 opacity-80" data-alt="Minimalist technical badge icon on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzZneuHrf0MDgzw2fgu_aP9L5cNTiOl826kVRJbiqFQjQnfgSN-UppoB2A6zV4MiC5LYVmgxiFx-DSG9CaDG-M88eIA3v-ontNZ89lbx-VNlZcZDZakIWAFDSmEwua7O7Am_12ghI57H4YfX0VUK3iB3jccnz5d-CJZ9KVrbs1rnC-MfY_7b6MEMwz7TbWRrbc3y83FGKyZ8VmiqGMqviHOMI7bA7HKUkJyvsfgwyNZATFuhIPHy2bBb8qoIpHA-o_KqFXA2LUCKc"/>
+<span class="text-[8px] font-bold uppercase tracking-tighter text-slate-500">Architect</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Integration Ecosystem -->
+<section class="py-24 px-8 bg-background">
+<div class="max-w-7xl mx-auto text-center">
+<h2 class="text-3xl font-bold mb-12 silver-text">The Connectivity Mesh</h2>
+<div class="flex flex-wrap justify-center gap-12 opacity-50">
+<!-- Symbolic generic representation of high-end ERP/HRIS types -->
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl">cloud_sync</span>
+<span class="text-[10px] font-bold tracking-widest text-slate-500 uppercase">HRIS Cloud</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl">dataset_linked</span>
+<span class="text-[10px] font-bold tracking-widest text-slate-500 uppercase">ERP Mesh</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl">api</span>
+<span class="text-[10px] font-bold tracking-widest text-slate-500 uppercase">REST Core</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl">sync_alt</span>
+<span class="text-[10px] font-bold tracking-widest text-slate-500 uppercase">Identity Hub</span>
+</div>
+</div>
+<p class="mt-12 text-sm text-on-surface-variant italic">Native connectors for SAP, Workday, Oracle, and ServiceNow environments.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-white/5 bg-[#050505]">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-4">
+<span class="text-lg font-black text-white font-headline">PRISM</span>
+<span class="w-[1px] h-4 bg-white/10"></span>
+<p class="text-[10px] font-semibold uppercase tracking-[0.1em] text-slate-500">© 2024 PRISM ARCHITECT. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-[10px] font-semibold uppercase tracking-[0.1em] text-slate-600 hover:text-[#0da6f2] transition-colors" href="#">Security</a>
+<a class="text-[10px] font-semibold uppercase tracking-[0.1em] text-slate-600 hover:text-[#0da6f2] transition-colors" href="#">API</a>
+<a class="text-[10px] font-semibold uppercase tracking-[0.1em] text-slate-600 hover:text-[#0da6f2] transition-colors" href="#">Terms</a>
+<a class="text-[10px] font-semibold uppercase tracking-[0.1em] text-slate-600 hover:text-[#0da6f2] transition-colors" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+</body></html>
